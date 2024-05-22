@@ -1,6 +1,6 @@
 # Work Log
 
-## GROUP MEMBER 1
+## Jason Ng
 
 ### date x
 
@@ -11,7 +11,7 @@ info
 info
 
 
-## GROUP MEMBER 2
+## Carmin Vuong
 
 ### date x
 
