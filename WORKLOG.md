@@ -2,9 +2,13 @@
 
 ## Jason Ng
 
-### date x
+### 5/22/2024 
 
-info
+Worked on getting everything set up 
+- networking files
+- encrypt & decrypt
+- did some research on RSA/blowfish/other algorithms
+- set up the THM
 
 ### date y
 
