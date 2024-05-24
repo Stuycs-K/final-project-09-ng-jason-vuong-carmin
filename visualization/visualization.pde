@@ -8,8 +8,8 @@ void setup() {
   noStroke();
   
   fill(WHEEL_COLOR);
-  wheel1 = new Wheel(345, 400, "");
-  wheel2 = new Wheel(855, 400, "");
+  wheel1 = new Wheel(345, 400, "QWERTYUIOPASDFGHJKLZXCVBNM");
+  wheel2 = new Wheel(855, 400, "abcdefghijklmnopqrstuvwxyz".toUpperCase());
   
    
 }
