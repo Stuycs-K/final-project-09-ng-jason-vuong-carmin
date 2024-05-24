@@ -11,6 +11,7 @@ def encrypt(text, key1, key2):
             if char == key1[i]: 
                 output += key2[__KEYSIZE__ - i - 1]
                 key2 = swap(key2, __KEYSIZE__ - i - 1)
+                break
     return output
 
 def swap (key2, index):
@@ -23,6 +24,5 @@ def swap (key2, index):
 if __name__ == "__main__":
     text = "Hello, World!"
     key1 = list("HXUCZVAMDSLKPEFJRIGTWOBNYQ")
-    print(key1)
     key2 = list("PTLNBQDEOYSFAVZKGJRIHWXUMC")
     print(encrypt(text, key1, key2))
