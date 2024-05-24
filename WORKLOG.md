@@ -17,9 +17,12 @@ info
 
 ## Carmin Vuong
 
-### date x
-
-info
+### 5/23/2024
+Found new idea of Chaociphers
+Worked on visualization part of this project using Processing
+- made 2 wheels (Wheel class)
+- added spokes for visual appeal
+- added letters
 
 ### date y
 
