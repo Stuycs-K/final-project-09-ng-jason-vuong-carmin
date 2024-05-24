@@ -14,6 +14,13 @@ void setup() {
    
 }
 
+String rotate(String string, char first) {
+  while (string.charAt(0) != first) {
+    // stub
+  }  
+  return string;
+}
+
 
 void draw() {
   wheel1.display();
