@@ -32,8 +32,8 @@ def shift(character, cipherText, plainText):
 
 def fixedCipher (cipherText): 
     temp = cipherText[1] 
-    for i in range(__NADIR__): 
-        cipherText[(i + 1)] = cipherText[(i+2)]
+    for i in range(1, __NADIR__): 
+        cipherText[i] = cipherText[i + __NADIR__]
     cipherText[__NADIR__ + 1] = temp 
     return cipherText
 
@@ -43,6 +43,9 @@ def fixedPlain (plainText):
         plainText[i] = plainText[ (i+1) % __KEYSIZE__]
     plainText[__KEYSIZE__ - 1] = temp 
     temp = plainText[2] # extract 2 from the zenith 
+    for i in range (2, __NADIR__ ): 
+        plainText[i] = plainText[i + 1]
+    plainText[__NADIR__] = temp 
     return plainText
     
 def zenithMethod (cipherText, index): 
@@ -76,5 +79,5 @@ if __name__ == "__main__":
     text = "Hello, World!"
     cipherText = list("HXUCZVAMDSLKPEFJRIGTWOBNYQ")
     plainText = list("PTLNBQDEOYSFAVZKGJRIHWXUMC")
-    erm = list("DFGJKLMNOQSTUVWXYZCIPHERAB")
+    erm = list("GIJKLMNPQRSTUVWXYZCHAOBDEF")
     print(fixedPlain(erm))
