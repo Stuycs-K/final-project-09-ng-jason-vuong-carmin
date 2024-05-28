@@ -15,8 +15,35 @@ def encrypt(text, cipherText, plainText):
                 break
     return output
 
-def shift(text, cipherText, plainText): 
-    temp = cipherText[0] 
+def shift(character, cipherText, plainText): 
+    #shift until 
+    while (plainText[0] != character): 
+        temp = plainText[0] 
+        for i in range (__KEYSIZE__): 
+            plainText[i] = plainText[ (i+1) % __KEYSIZE__]
+        plainText[__KEYSIZE__ - 1] = temp 
+        temp = cipherText[0]
+        for i in range (__KEYSIZE__): 
+            cipherText[i] = cipherText[ (i+1) % __KEYSIZE__]
+        cipherText[__KEYSIZE__ - 1] = temp
+    
+    return cipherText, plainText 
+
+
+def fixedCipher (cipherText): 
+    temp = cipherText[1] 
+    for i in range(__NADIR__): 
+        cipherText[(i + 1)] = cipherText[(i+2)]
+    cipherText[__NADIR__ + 1] = temp 
+    return cipherText
+
+def fixedPlain (plainText): 
+    temp = plainText[0] 
+    for i in range (__KEYSIZE__): 
+        plainText[i] = plainText[ (i+1) % __KEYSIZE__]
+    plainText[__KEYSIZE__ - 1] = temp 
+    temp = plainText[2] # extract 2 from the zenith 
+    return plainText
     
 def zenithMethod (cipherText, index): 
     temp = cipherText[(index + 1) % __KEYSIZE__]
@@ -24,7 +51,6 @@ def zenithMethod (cipherText, index):
         cipherText[(index + i + 1) % __KEYSIZE__ ] = cipherText[(index + i + 2) % __KEYSIZE__ ] 
     cipherText[(index + __NADIR__ + 1) % __KEYSIZE__] = temp 
 
-def plainTextMethod (plainText, index): 
 
 def swap (key2, index):
     temp = key2[index]
@@ -43,10 +69,6 @@ def reorder (cipherText, index):
         #then move everything down  
         
 
-    key2 = []
-    for i in range(0, 26):
-        key1.append(plainText[cipherText.index(chr(65 + i))])
-        key2.append(cipherText[i])
     return 
 
 
@@ -54,4 +76,5 @@ if __name__ == "__main__":
     text = "Hello, World!"
     cipherText = list("HXUCZVAMDSLKPEFJRIGTWOBNYQ")
     plainText = list("PTLNBQDEOYSFAVZKGJRIHWXUMC")
-    print(encrypt(text, cipherText, plainText))
+    erm = list("DFGJKLMNOQSTUVWXYZCIPHERAB")
+    print(fixedPlain(erm))
