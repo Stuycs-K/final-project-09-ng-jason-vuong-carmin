@@ -14,16 +14,30 @@ void setup() {
    
 }
 
-String rotate(String string, char first) {
-  while (string.charAt(0) != first) {
-    // stub
-  }  
+String rotate(String string) {
+  //while (string.charAt(0) != first) {
+   string = string.substring(1, string.length()) + string.substring(0, 1);
+  //}  
+  return string;
+}
+
+String unrotate(String string) {
+  //while (string.charAt(0) != first) {
+   string = string.substring(string.length()-1, string.length()) + string.substring(0, string.length()-1);
+  //}  
   return string;
 }
 
 
-void draw() {
+void draw() {  
   wheel1.display();
   wheel2.display();
+  
+  
+}
+
+void mousePressed() {
+  wheel1.alphabet = rotate(wheel1.alphabet);
+  wheel2.alphabet = unrotate(wheel2.alphabet);
   
 }

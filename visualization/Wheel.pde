@@ -33,5 +33,9 @@ class Wheel {
     fill(WHEEL_COLOR);
     drawSpokesAndLetters();
   }
+  
+  void rotate_out() {
+    
+  }
 
 }
