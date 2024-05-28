@@ -15,10 +15,16 @@ def encrypt(text, cipherText, plainText):
                 break
     return output
 
-def shift(text, cipherText, plainText)[
+def shift(text, cipherText, plainText): 
     temp = cipherText[0] 
     
-]
+def zenithMethod (cipherText, index): 
+    temp = cipherText[(index + 1) % __KEYSIZE__]
+    for i in range(__NADIR__): 
+        cipherText[(index + i + 1) % __KEYSIZE__ ] = cipherText[(index + i + 2) % __KEYSIZE__ ] 
+    cipherText[(index + __NADIR__ + 1) % __KEYSIZE__] = temp 
+
+def plainTextMethod (plainText, index): 
 
 def swap (key2, index):
     temp = key2[index]
