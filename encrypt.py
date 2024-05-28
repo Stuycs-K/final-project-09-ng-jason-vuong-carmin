@@ -8,11 +8,10 @@ def encrypt(text, cipherText, plainText):
     text = text.upper()
     output = ""
     for char in text: 
-        for i in range(0, 26): 
-            if char == plainText[i]: 
-                output += cipherText[i]
-                key2 = reorder(cipherText, i)
-                break
+        cipherText, plainText = shift(char, cipherText, plainText)
+        output += cipherText[0]
+        cipherText = fixedCipher(cipherText) 
+        plainText = fixedPlain(plainText)
     return output
 
 def shift(character, cipherText, plainText): 
@@ -76,8 +75,7 @@ def reorder (cipherText, index):
 
 
 if __name__ == "__main__":
-    text = "Hello, World!"
-    cipherText = list("HXUCZVAMDSLKPEFJRIGTWOBNYQ")
-    plainText = list("PTLNBQDEOYSFAVZKGJRIHWXUMC")
-    erm = list("GIJKLMNPQRSTUVWXYZCHAOBDEF")
-    print(fixedCipher(erm))
+    text = "dcode"
+    cipherText = list("CHAOBDEFGIJKLMNPQRSTUVWXYZ")
+    plainText = list("CIPHERABDFGJKLMNOQSTUVWXYZ")
+    print(encrypt(text, cipherText, plainText))
