@@ -33,8 +33,8 @@ def shift(character, cipherText, plainText):
 def fixedCipher (cipherText): 
     temp = cipherText[1] 
     for i in range(1, __NADIR__): 
-        cipherText[i] = cipherText[i + __NADIR__]
-    cipherText[__NADIR__ + 1] = temp 
+        cipherText[i] = cipherText[i + 1]
+    cipherText[__NADIR__ ] = temp 
     return cipherText
 
 def fixedPlain (plainText): 
@@ -80,4 +80,4 @@ if __name__ == "__main__":
     cipherText = list("HXUCZVAMDSLKPEFJRIGTWOBNYQ")
     plainText = list("PTLNBQDEOYSFAVZKGJRIHWXUMC")
     erm = list("GIJKLMNPQRSTUVWXYZCHAOBDEF")
-    print(fixedPlain(erm))
+    print(fixedCipher(erm))
