@@ -36,8 +36,20 @@ void draw() {
   
 }
 
-void mousePressed() {
+void rotateOut() {
   wheel1.alphabet = rotate(wheel1.alphabet);
   wheel2.alphabet = unrotate(wheel2.alphabet);
+}
+
+void rotateIn() {
+  wheel1.alphabet = unrotate(wheel1.alphabet);
+  wheel2.alphabet = rotate(wheel2.alphabet);
+  
+}
+
+void mousePressed() {
+  if (mouseButton == RIGHT) rotateOut();
+  else if (mouseButton == LEFT) rotateIn();
+  
   
 }
