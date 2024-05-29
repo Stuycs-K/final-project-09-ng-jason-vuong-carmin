@@ -36,3 +36,7 @@ work on rotation of the cipher wheel
 - allowed CCW rotation of left wheel + CW rotation of the right wheel
 
 
+### 5/29/2024
+make other rotation possible + control using mouse buttons
+- make zenith position RED and BIG and on the top
+- tell Jason chaocipher's alphabet is generated reversed
