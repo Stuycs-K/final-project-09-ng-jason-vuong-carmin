@@ -10,10 +10,17 @@ Worked on getting everything set up
 - did some research on RSA/blowfish/other algorithms
 - set up the THM
 
-### date y
+### 5/23/2024
 
-info
+Pivoted ideas so worked on researching primarily 
+- coded encrypt and decrypt 
+- encrypt and decrypt aren't entirely accurate, however; need to go back and fix that 
 
+### 5/28/2024
+Mostly worked on coding the algorithm
+- finished encryption and encryption 
+- wrote helper methods 
+- refactored some code 
 
 ## Carmin Vuong
 
