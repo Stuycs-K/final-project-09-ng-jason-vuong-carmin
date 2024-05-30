@@ -18,7 +18,7 @@ Pivoted ideas so worked on researching primarily
 
 ### 5/28/2024
 Mostly worked on coding the algorithm
-- finished encryption and encryption 
+- finished encryption and decryption 
 - wrote helper methods 
 - refactored some code 
 

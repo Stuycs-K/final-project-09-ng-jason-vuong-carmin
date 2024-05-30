@@ -77,19 +77,21 @@ if __name__ == "__main__":
         exit(1)
 
     while (True) {
-        text = input("Please enter the text you've read: ").read("r")
-        
+        text = input("Please enter the text you've read: ").read("r")`
+        choice = input("Type 1 for encryption mode and 2 for decryption: ")
+        if choice != "1" and choice != "2":
+            print("Invalid choice")
+            exit(1)
+        if choice == "1":
+            result = encrypt(text, cipherStream, keyStream)
+            print(" ")
+            print ("------ENCRYPTED TEXT------")
+            print(result)
+        elif choice == "2":
+            result = decrypt(text, cipherStream, keyStream)
+            print(" ")
+            print ("------DECRYPTED TEXT------")
+            print(result)
 
     } 
-    text = input("Please enter the text to be encrypted or decrypted: ")
 
-    if choice == "1":
-        result = encrypt(text, cipherStream, keyStream)
-        print(" ")
-        print ("------ENCRYPTED TEXT------")
-        print(result)
-    elif choice == "2":
-        result = decrypt(text, cipherStream, keyStream)
-        print(" ")
-        print ("------DECRYPTED TEXT------")
-        print(result)
