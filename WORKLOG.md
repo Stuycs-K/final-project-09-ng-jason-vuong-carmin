@@ -22,6 +22,15 @@ Mostly worked on coding the algorithm
 - wrote helper methods 
 - refactored some code 
 
+### 5/29/2024
+Added a way to take in inputs for the cipher 
+- made checks to ensure that the keys were of the same length
+- made sure to reject the plain key if they did not contain the proper set of characters 
+
+## 5/30/2024
+Trying to reformat the cipher to accept files as inputs 
+- want to make this cipher available for byte data, not just chars 
+
 ## Carmin Vuong
 
 ### 5/23/2024

@@ -78,5 +78,4 @@ if __name__ == "__main__":
     text = "dcode"
     cipherText = list("CHAOBDEFGIJKLMNPQRSTUVWXYZ")
     plainText = list("CIPHERABDFGJKLMNOQSTUVWXYZ")
-    print ("------ENCRYPTED TEXT------")
     print(encrypt(text, cipherText, plainText))
