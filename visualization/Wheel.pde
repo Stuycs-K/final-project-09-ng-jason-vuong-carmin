@@ -15,7 +15,7 @@ class Wheel {
     for (int i = 0; i < alphabet.length(); i++) {
       int endx =  (int) (cx + cos(i*2*PI/26)*r/2);
       int endy = (int) (cy + sin(i*2*PI/26)*r/2);
-      if (i == 19) { // zenith
+      if (i == 0) { // zenith
         fill(255, 0, 0);
         textSize(40);
       } else {
@@ -23,7 +23,7 @@ class Wheel {
         textSize(30);
       }
       textAlign(CENTER, CENTER);
-      text(alphabet.charAt(i), cx + cos(i*2*PI/26+PI/26)*(r/2-25), cy + sin(i*2*PI/26+PI/26)*(r/2-25));
+      text(alphabet.charAt(i), cx + cos(i*2*PI/26+PI/26-14*PI/26)*(r/2-25), cy + sin(i*2*PI/26+PI/26-14*PI/26)*(r/2-25));
       fill(WHEEL_COLOR);
       line(cx, cy, endx, endy);
     }
