@@ -30,6 +30,7 @@ Added a way to take in inputs for the cipher
 ## 5/30/2024
 Trying to reformat the cipher to accept files as inputs 
 - want to make this cipher available for byte data, not just chars 
+- attempted to make a bytearray, but this did not work
 
 ## Carmin Vuong
 
