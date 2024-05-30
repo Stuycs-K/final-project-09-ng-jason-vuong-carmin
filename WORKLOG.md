@@ -40,3 +40,9 @@ work on rotation of the cipher wheel
 make other rotation possible + control using mouse buttons
 - make zenith position RED and BIG and on the top
 - tell Jason chaocipher's alphabet is generated reversed
+
+### 5/30/2024
+attempt to implement the reversed order of the wheels
+- doesn't work
+- better implementation could be make 2 separate methods todisplay the letters
+- one is CW and one is CCW (starts at zenith)
