@@ -3,11 +3,11 @@
 import os 
 import sys 
 
-global keySize = 1
+global keySize
+keySize = 1
 
 def encrypt(data, cipherStream, keyStream):
     # text 
-    text = text.upper()
     output = ""
     for byte in data: 
         cipherStream, keyStream = shift(byte, cipherStream, keyStream)
@@ -37,9 +37,9 @@ def shift(byte, cipherStream, keyStream):
 
 def fixedCipher (cipherStream): 
     temp = cipherStream[1] 
-    for i in range(1, __NADIR__): 
+    for i in range(1, keySize // 2): 
         cipherStream[i] = cipherStream[i + 1]
-    cipherStream[__NADIR__ ] = temp 
+    cipherStream[keySize // 2] = temp 
     return cipherStream
 
 def fixedPlain (keyStream): 
@@ -48,9 +48,9 @@ def fixedPlain (keyStream):
         keyStream[i] = keyStream[ (i+1) % keySize]
     keyStream[keySize - 1] = temp 
     temp = keyStream[2] # extract 2 from the zenith 
-    for i in range (2, __NADIR__ ): 
+    for i in range (2, keySize // 2): 
         keyStream[i] = keyStream[i + 1]
-    keyStream[__NADIR__] = temp 
+    keyStream[keySize // 2] = temp 
     return keyStream
     
 def decrypt(text, cipherStream, keyStream):
@@ -66,33 +66,37 @@ def decrypt(text, cipherStream, keyStream):
 
 if __name__ == "__main__":
 
-    cipherLoc = input("Please enter the path for the cipher file: ")
-    cipherStream = list(open(cipherLoc).read("r"))
+    # print(encrypt (sys.argv[1], sys.argv[2], sys.argv[3]))
+
+    # cipherLoc = input("Please enter the path for the cipher file: ")
+    cipherStream = list(open(sys.argv[1], "r").read())
+    # print(cipherStream)
     keySize = len(cipherStream)
-    keyLoc = input ("Please enter the path for the key file: ")
-    keyStream = list(open(keyLoc).read("r"))
+    # keyLoc = input ("Please enter the path for the key file: ")
+    keyStream = list(open(sys.argv[2], "r").read())
 
     if len(keyStream) != keySize:
         print("Keys are of different lengths")
         exit(1)
 
-    text = input("Please enter the text you've read: ").read("r")`
-    choice = input("Type 1 for encryption mode and 2 for decryption: ")
-    if choice != "1" and choice != "2":
-        print("Invalid choice")
-        exit(1)
-    if choice == "1":
-        result = encrypt(text, cipherStream, keyStream)
-        print(" ")
-        print ("------ENCRYPTED TEXT------")
-        print(result)
-    elif choice == "2":
-        result = decrypt(text, cipherStream, keyStream)
-        print(" ")
-        print ("------DECRYPTED TEXT------")
-        print(result)
+    text = open(sys.argv[3], "r").read()
+    # input("Please enter the text you've read: ")
+    # choice = input("Type 1 for encryption mode and 2 for decryption: ")
+    # if choice != "1" and choice != "2":
+    #     print("Invalid choice")
+    #     exit(1)
+    # if choice == "1":
+    #     result = encrypt(text, cipherStream, keyStream)
+    #     print(" ")
+    #     print ("------ENCRYPTED TEXT------")
+    #     print(result)
+    # elif choice == "2":
+    #     result = decrypt(text, cipherStream, keyStream)
+    #     print(" ")
+    #     print ("------DECRYPTED TEXT------")
+    #     print(result)
 
-    
+    print(encrypt(text, cipherStream, keyStream))
 
     
 
