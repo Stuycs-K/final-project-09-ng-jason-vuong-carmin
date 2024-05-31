@@ -46,3 +46,9 @@ attempt to implement the reversed order of the wheels
 - doesn't work
 - better implementation could be make 2 separate methods todisplay the letters
 - one is CW and one is CCW (starts at zenith)
+
+### 5/31/2024
+make code cleaner with more methods
+- added displayCW and displayCCW methods inside Wheel class
+- need to add permutatation
+
