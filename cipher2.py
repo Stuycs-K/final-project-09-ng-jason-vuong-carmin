@@ -67,19 +67,35 @@ def decrypt(text, cipherStream, keyStream):
 if __name__ == "__main__":
 
     # print(encrypt (sys.argv[1], sys.argv[2], sys.argv[3]))
+    cipherArr = []
+    keyArr = []
 
-    # cipherLoc = input("Please enter the path for the cipher file: ")
-    cipherStream = list(open(sys.argv[1], "r").read())
-    # print(cipherStream)
+    cipherLoc = sys.argv[1]
+    # input("Please enter the path for the cipher file: ")
+    with open(cipherLoc, "rb") as cipherFile:
+        cipherStream = cipherFile.read()
+        for x in cipherStream: 
+          cipherArr.append(x) 
+     
+            
+    # cipherStream = list(open(sys.argv[1], "r").read())
+    # # print(cipherStream)
     keySize = len(cipherStream)
-    # keyLoc = input ("Please enter the path for the key file: ")
-    keyStream = list(open(sys.argv[2], "r").read())
+    keyLoc = sys.argv[2]
+    # input ("Please enter the path for the key file: ")
+
+    with open(keyLoc, "rb") as keyFile: 
+        keyStream = keyFile.read()
+        for x in keyStream: 
+          keyArr.append(x)
 
     if len(keyStream) != keySize:
         print("Keys are of different lengths")
         exit(1)
-
-    text = open(sys.argv[3], "r").read()
+ 
+    with open("output.txt", "rb") as outPut: 
+        outPut.write(text)
+    # open(sys.argv[3], "r").read()
     # input("Please enter the text you've read: ")
     # choice = input("Type 1 for encryption mode and 2 for decryption: ")
     # if choice != "1" and choice != "2":
