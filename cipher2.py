@@ -8,12 +8,13 @@ keySize = 1
 
 def encrypt(data, cipherStream, keyStream):
     # text 
-    output = ""
+    output = []
     for byte in data: 
         cipherStream, keyStream = shift(byte, cipherStream, keyStream)
-        output += cipherStream[0]
+        output.append(cipherStream[0])
         cipherStream = fixedCipher(cipherStream) 
         keyStream = fixedPlain(keyStream)
+    print(output)
     return output
 
 def shift(byte, cipherStream, keyStream): 
@@ -92,9 +93,14 @@ if __name__ == "__main__":
     if len(keyStream) != keySize:
         print("Keys are of different lengths")
         exit(1)
- 
-    with open("output.txt", "rb") as outPut: 
+    
+    with open(sys.argv[3], "rb") as text: 
+        text = text.read() 
+        text = encrypt(text, cipherArr, keyArr)
+
+    with open("output.txt", "wb") as outPut: 
         outPut.write(text)
+
     # open(sys.argv[3], "r").read()
     # input("Please enter the text you've read: ")
     # choice = input("Type 1 for encryption mode and 2 for decryption: ")
@@ -112,7 +118,6 @@ if __name__ == "__main__":
     #     print ("------DECRYPTED TEXT------")
     #     print(result)
 
-    print(encrypt(text, cipherStream, keyStream))
 
     
 
