@@ -10,7 +10,7 @@ void setup() {
   fill(WHEEL_COLOR);
   wheel1 = new Wheel(345, 400, "QWERTYUIOPASDFGHJKLZXCVBNM");
   wheel2 = new Wheel(855, 400, "abcdefghijklmnopqrstuvwxyz".toUpperCase());
-  wheel2.alphabet = reverse_word(wheel2.alphabet); // for the reversed wheels
+  //wheel2.alphabet = reverse_word(wheel2.alphabet); // for the reversed wheels
   
    
 }
@@ -30,13 +30,13 @@ String unrotate(String string) {
 }
 
 
-void rotateOut() {
-  wheel1.alphabet = rotate(wheel1.alphabet);
+void rotateIn() {
+  wheel1.alphabet = unrotate(wheel1.alphabet);
   wheel2.alphabet = unrotate(wheel2.alphabet);
 }
 
-void rotateIn() {
-  wheel1.alphabet = unrotate(wheel1.alphabet);
+void rotateOut() {
+  wheel1.alphabet = rotate(wheel1.alphabet);
   wheel2.alphabet = rotate(wheel2.alphabet);
   
 }
@@ -51,8 +51,8 @@ String reverse_word(String word) {
 }
 
 void draw() {  
-  wheel1.display();
-  wheel2.display();
+  wheel1.displayCW();
+  wheel2.displayCCW();
   
   println(reverse_word("penis"));
   
@@ -60,8 +60,8 @@ void draw() {
 }
 
 void mousePressed() {
-  if (mouseButton == RIGHT) rotateOut();
-  else if (mouseButton == LEFT) rotateIn();
+  if (mouseButton == RIGHT) rotateIn();
+  else if (mouseButton == LEFT) rotateOut();
   
   
 }
