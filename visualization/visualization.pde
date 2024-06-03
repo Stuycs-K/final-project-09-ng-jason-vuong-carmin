@@ -29,6 +29,11 @@ String unrotate(String string) {
   return string;
 }
 
+String permute(String string) {
+    println(string.substring(0, 14));
+    return "hi";
+}
+
 
 void rotateIn() {
   wheel1.alphabet = unrotate(wheel1.alphabet);
@@ -54,7 +59,7 @@ void draw() {
   wheel1.displayCW();
   wheel2.displayCCW();
   
-  println(reverse_word("penis"));
+  //println(reverse_word("penis"));
   
   
 }
@@ -63,5 +68,6 @@ void mousePressed() {
   if (mouseButton == RIGHT) rotateIn();
   else if (mouseButton == LEFT) rotateOut();
   
+  println(permute(wheel2.alphabet));
   
 }
