@@ -41,6 +41,7 @@ Worked on getting byte data to work
 Finally got the bytes to go from one thing to another
 - still doesn't not display properly
 - nevermind, figured out it was an issue with .upper in the decrypt method
+Started work on the TryHackMe. Looked at a video about VMs and quickly realized that yes, this would be way harder than I thought. 
 
 ## Carmin Vuong
 
