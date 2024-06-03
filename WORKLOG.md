@@ -32,6 +32,11 @@ Trying to reformat the cipher to accept files as inputs
 - want to make this cipher available for byte data, not just chars 
 - attempted to make a bytearray, but this did not work
 
+## 5/31/2024 
+Worked on getting byte data to work
+- make a makefile to speed up the workflow
+- figured out a way to open files using the "wb"/"rb" modes
+
 ## Carmin Vuong
 
 ### 5/23/2024

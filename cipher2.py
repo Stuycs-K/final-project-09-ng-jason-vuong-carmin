@@ -14,8 +14,7 @@ def encrypt(data, cipherStream, keyStream):
         output.append(cipherStream[0])
         cipherStream = fixedCipher(cipherStream) 
         keyStream = fixedPlain(keyStream)
-    print(output)
-    return output
+    return bytes(output)
 
 def shift(byte, cipherStream, keyStream): 
     #shift until 
