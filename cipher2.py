@@ -54,15 +54,14 @@ def fixedPlain (keyStream):
     return keyStream
     
 def decrypt(text, cipherStream, keyStream):
-    text = text.upper()
-    output = ""
+    output = []
     for char in text: 
         keyStream, cipherStream = shift(char, keyStream, cipherStream)
         #print(cipherStream)
-        output += keyStream[0]
+        output.append(keyStream[0])
         cipherStream = fixedCipher(cipherStream) 
         keyStream = fixedPlain(keyStream)
-    return output
+    return bytes(output)
 
 if __name__ == "__main__":
 
@@ -95,9 +94,9 @@ if __name__ == "__main__":
     
     with open(sys.argv[3], "rb") as text: 
         text = text.read() 
-        text = encrypt(text, cipherArr, keyArr)
+        text = decrypt(text, cipherArr, keyArr)
 
-    with open("output.txt", "wb") as outPut: 
+    with open(sys.argv[4], "wb+") as outPut: 
         outPut.write(text)
 
     # open(sys.argv[3], "r").read()

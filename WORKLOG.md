@@ -37,6 +37,11 @@ Worked on getting byte data to work
 - make a makefile to speed up the workflow
 - figured out a way to open files using the "wb"/"rb" modes
 
+## 6/03/2024 
+Finally got the bytes to go from one thing to another
+- still doesn't not display properly
+- nevermind, figured out it was an issue with .upper in the decrypt method
+
 ## Carmin Vuong
 
 ### 5/23/2024
