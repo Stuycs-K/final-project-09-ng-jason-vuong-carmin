@@ -3,6 +3,8 @@ color BG_COLOR = #D1D1D1;
 color WHEEL_COLOR= #3ECEF7;
 color GREEN = #1DD306;
 color LIGHT_GREEN = color(0, 255, 0);
+String encrypted;
+String decrypted;
 
 void setup() {
   size(1200, 800);
@@ -12,6 +14,9 @@ void setup() {
   fill(WHEEL_COLOR);
   wheel1 = new Wheel(345, 300, "QWERTYUIOPASDFGHJKLZXCVBNM");
   wheel2 = new Wheel(855, 300, "abcdefghijklmnopqrstuvwxyz".toUpperCase());
+  
+  encrypted = "";
+  decrypted = "";
   
   
   //wheel2.alphabet = reverse_word(wheel2.alphabet); // for the reversed wheels
@@ -92,6 +97,10 @@ void mousePressed() {
 
 void keyPressed() {
   if (key == ' ') { // WHEN YOU FIND THE LETTER
+    encrypted += wheel1.alphabet.charAt(0);
+    decrypted += wheel2.alphabet.charAt(0);
+    println(encrypted);
+    println(decrypted);
     wheel1.alphabet = permute(wheel1.alphabet);
     wheel2.alphabet = permute(wheel2.alphabet);
   }
