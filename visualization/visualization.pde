@@ -1,6 +1,8 @@
 Wheel wheel1, wheel2;
 color BG_COLOR = #D1D1D1;
-color WHEEL_COLOR = #3CC1F0;
+color WHEEL_COLOR= #3ECEF7;
+color GREEN = #1DD306;
+color LIGHT_GREEN = color(0, 255, 0);
 
 void setup() {
   size(1200, 800);
@@ -10,6 +12,8 @@ void setup() {
   fill(WHEEL_COLOR);
   wheel1 = new Wheel(345, 300, "QWERTYUIOPASDFGHJKLZXCVBNM");
   wheel2 = new Wheel(855, 300, "abcdefghijklmnopqrstuvwxyz".toUpperCase());
+  
+  
   //wheel2.alphabet = reverse_word(wheel2.alphabet); // for the reversed wheels
   
    
@@ -61,20 +65,33 @@ void draw() {
   wheel1.displayCW();
   wheel2.displayCCW();
   
+  textAlign(CENTER, CENTER);
+  textSize(50);
+  fill(GREEN);
+  text("ciphertext", 345, 300);
+  fill(255, 0, 0);
+  text("plaintext", 855, 300);
+  fill(WHEEL_COLOR);
+  
   //println(reverse_word("penis"));
   
   
 }
 
 void mousePressed() {
-  if (mouseButton == RIGHT) rotateIn();
-  else if (mouseButton == LEFT) rotateOut();
+  if (mouseButton == RIGHT) {
+    rotateIn();
+  }
+  else if (mouseButton == LEFT) {
+    rotateOut();
+  
+  }
   
   
 }
 
 void keyPressed() {
-  if (key == ' ') {
+  if (key == ' ') { // WHEN YOU FIND THE LETTER
     wheel1.alphabet = permute(wheel1.alphabet);
     wheel2.alphabet = permute(wheel2.alphabet);
   }

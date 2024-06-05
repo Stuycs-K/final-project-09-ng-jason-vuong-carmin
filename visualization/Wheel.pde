@@ -16,7 +16,7 @@ class Wheel {
       int endx =  (int) (cx + cos(i*2*PI/26)*r/2);
       int endy = (int) (cy + sin(i*2*PI/26)*r/2);
       if (i == 0) { // zenith
-        fill(255, 0, 0);
+        fill(LIGHT_GREEN);
         textSize(40);
       } 
       else if (i == 13) {
