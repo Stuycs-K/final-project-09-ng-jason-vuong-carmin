@@ -52,3 +52,17 @@ make code cleaner with more methods
 - added displayCW and displayCCW methods inside Wheel class
 - need to add permutatation
 
+### 6/3/2024
+start permute function
+- use substrings
+
+### 6/5/2024
+finish permute function
+- for left and right wheel
+- manual control using space bar agfter choosing a letter
+
+add nadir and fix coloring
+- added labels for both wheels
+
+test out encoding and decoding but it doesn't work
+- need to confirm with dcode.fr if my implementation is correct
