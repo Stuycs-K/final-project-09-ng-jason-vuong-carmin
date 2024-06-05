@@ -18,7 +18,12 @@ class Wheel {
       if (i == 0) { // zenith
         fill(255, 0, 0);
         textSize(40);
-      } else {
+      } 
+      else if (i == 13) {
+        fill(0, 0, 255);
+        textSize(40);
+      }
+      else {
         fill(255, 255, 255);
         textSize(30);
       }
@@ -39,7 +44,12 @@ class Wheel {
       if (i == 0) { // zenith
         fill(255, 0, 0);
         textSize(40);
-      } else {
+      } 
+      else if (i == 13) {
+        fill(0, 0, 255);
+        textSize(40);
+      }
+      else {
         fill(255, 255, 255);
         textSize(30);
       }

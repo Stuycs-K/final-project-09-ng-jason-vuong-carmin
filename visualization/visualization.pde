@@ -8,8 +8,8 @@ void setup() {
   noStroke();
   
   fill(WHEEL_COLOR);
-  wheel1 = new Wheel(345, 400, "QWERTYUIOPASDFGHJKLZXCVBNM");
-  wheel2 = new Wheel(855, 400, "abcdefghijklmnopqrstuvwxyz".toUpperCase());
+  wheel1 = new Wheel(345, 300, "QWERTYUIOPASDFGHJKLZXCVBNM");
+  wheel2 = new Wheel(855, 300, "abcdefghijklmnopqrstuvwxyz".toUpperCase());
   //wheel2.alphabet = reverse_word(wheel2.alphabet); // for the reversed wheels
   
    
@@ -30,8 +30,10 @@ String unrotate(String string) {
 }
 
 String permute(String string) {
-    println(string.substring(0, 14));
-    return "hi";
+    String newString = string.substring(0,13)+string.charAt(25)+string.substring(13,25);
+    //println(string);
+    //println(newString);
+    return newString;
 }
 
 
@@ -68,6 +70,12 @@ void mousePressed() {
   if (mouseButton == RIGHT) rotateIn();
   else if (mouseButton == LEFT) rotateOut();
   
-  println(permute(wheel2.alphabet));
   
+}
+
+void keyPressed() {
+  if (key == ' ') {
+    wheel1.alphabet = permute(wheel1.alphabet);
+    wheel2.alphabet = permute(wheel2.alphabet);
+  }
 }
