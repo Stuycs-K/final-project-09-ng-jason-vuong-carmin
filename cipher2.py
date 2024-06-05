@@ -20,6 +20,7 @@ def shift(byte, cipherStream, keyStream):
     #shift until 
     if byte not in keyStream: 
         print("Invalid byte inputted")
+        print(f"There doesn't exist a character with the ASCII value of {byte} in the keystream.")
         exit(1)
 
     while (keyStream[0] != byte): 
@@ -69,6 +70,10 @@ if __name__ == "__main__":
     cipherArr = []
     keyArr = []
 
+    if (len (sys.argv) < 6 ): 
+        print('Not enough args')
+        exit(1) 
+
     cipherLoc = sys.argv[1]
     # input("Please enter the path for the cipher file: ")
     with open(cipherLoc, "rb") as cipherFile:
@@ -94,6 +99,9 @@ if __name__ == "__main__":
     
     with open(sys.argv[3], "rb") as text: 
         text = text.read() 
+    if (sys.argv[5] == "encrypt"): 
+        text = encrypt(text, cipherArr, keyArr)
+    elif (sys.argv[5] == "decrypt"): 
         text = decrypt(text, cipherArr, keyArr)
 
     with open(sys.argv[4], "wb+") as outPut: 
