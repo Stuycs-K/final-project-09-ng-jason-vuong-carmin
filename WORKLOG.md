@@ -44,6 +44,8 @@ Finally got the bytes to go from one thing to another
 Started work on the TryHackMe. Looked at a video about VMs and quickly realized that yes, this would be way harder than I thought. 
 - updated the TryHackMe to have two different tasks 
 
+## 6/05/2024 
+
 ## Carmin Vuong
 
 ### 5/23/2024
