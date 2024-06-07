@@ -17,6 +17,7 @@ def encrypt(text, cipherText, plainText):
 def shift(character, cipherText, plainText): 
     #shift until 
     if character not in plainText: 
+        print(character)
         print("Invalid character inputted")
         exit(1)
 
@@ -71,13 +72,15 @@ if __name__ == "__main__":
 
     cipherText = list(input("Please enter the CIPHER TEXT KEY: "))
     plainText = list(input("Please enter the PLAIN TEXT KEY: "))
+    # print(cipherText)
+    # print(plainText)
 
     if len(cipherText) != __KEYSIZE__ or len(plainText) != __KEYSIZE__:
         print("Invalid key length. Please enter a key of length 26.")
         exit(1)
 
     text = input("Please enter the text to be encrypted or decrypted: ")
-
+    text = text.rstrip()
     if choice == "1":
         result = encrypt(text, cipherText, plainText)
         print(" ")
