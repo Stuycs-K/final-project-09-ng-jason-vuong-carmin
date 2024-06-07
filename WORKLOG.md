@@ -45,6 +45,11 @@ Started work on the TryHackMe. Looked at a video about VMs and quickly realized 
 - updated the TryHackMe to have two different tasks 
 
 ## 6/05/2024 
+- Working on the THM 
+
+## 6/07/2024 
+- Refactored some code that was wrong 
+- Tested some more code to see if something breaks
 
 ## Carmin Vuong
 
