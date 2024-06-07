@@ -50,6 +50,7 @@ Started work on the TryHackMe. Looked at a video about VMs and quickly realized 
 ## 6/07/2024 
 - Refactored some code that was wrong 
 - Tested some more code to see if something breaks
+- used a base58 calculator for the code 
 
 ## Carmin Vuong
 
