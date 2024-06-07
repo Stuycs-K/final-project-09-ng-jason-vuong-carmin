@@ -10,39 +10,45 @@ void setup() {
   size(1200, 800);
   background(BG_COLOR); // gray
   noStroke();
-  
+
   fill(WHEEL_COLOR);
   wheel1 = new Wheel(345, 300, "QWERTYUIOPASDFGHJKLZXCVBNM");
   wheel2 = new Wheel(855, 300, "abcdefghijklmnopqrstuvwxyz".toUpperCase());
-  
+
   encrypted = "";
   decrypted = "";
-  
-  
+
+
   //wheel2.alphabet = reverse_word(wheel2.alphabet); // for the reversed wheels
-  
-   
 }
 
-String rotate(String string) {
+String rotate(String string) { // ABCDE --> BCDEA
   //while (string.charAt(0) != first) {
-   string = string.substring(1, string.length()) + string.substring(0, 1);
-  //}  
+  string = string.substring(1, string.length()) + string.substring(0, 1);
+  //}
   return string;
 }
 
-String unrotate(String string) {
+String unrotate(String string) { // ABCDE --> EABCD
   //while (string.charAt(0) != first) {
-   string = string.substring(string.length()-1, string.length()) + string.substring(0, string.length()-1);
-  //}  
+  string = string.substring(string.length()-1, string.length()) + string.substring(0, string.length()-1);
+  //}
   return string;
 }
 
-String permute(String string) {
-    String newString = string.substring(0,13)+string.charAt(25)+string.substring(13,25);
-    //println(string);
-    //println(newString);
-    return newString;
+String permuteLeft(String string) {
+  String newString = string.substring(0, 13)+string.charAt(25)+string.substring(13, 25);
+  //println(string);
+  //println(newString);
+  return newString;
+}
+
+String permuteRight(String string) {
+  string = rotate(string);
+  String newString = string.substring(0, 13)+string.charAt(24)+string.substring(13, 24)+string.charAt(25);
+  //println(string);
+  //println(newString);
+  return newString;
 }
 
 
@@ -54,7 +60,6 @@ void rotateIn() {
 void rotateOut() {
   wheel1.alphabet = rotate(wheel1.alphabet);
   wheel2.alphabet = rotate(wheel2.alphabet);
-  
 }
 
 String reverse_word(String word) {
@@ -63,13 +68,12 @@ String reverse_word(String word) {
     newWord += word.charAt(i);
   }
   return newWord;
-  
 }
 
-void draw() {  
+void draw() {
   wheel1.displayCW();
   wheel2.displayCCW();
-  
+
   textAlign(CENTER, CENTER);
   textSize(50);
   fill(GREEN);
@@ -77,22 +81,16 @@ void draw() {
   fill(255, 0, 0);
   text("plaintext", 855, 300);
   fill(WHEEL_COLOR);
-  
+
   //println(reverse_word("penis"));
-  
-  
 }
 
 void mousePressed() {
   if (mouseButton == RIGHT) {
     rotateIn();
-  }
-  else if (mouseButton == LEFT) {
+  } else if (mouseButton == LEFT) {
     rotateOut();
-  
   }
-  
-  
 }
 
 void keyPressed() {
@@ -101,7 +99,7 @@ void keyPressed() {
     decrypted += wheel2.alphabet.charAt(0);
     println(encrypted);
     println(decrypted);
-    wheel1.alphabet = permute(wheel1.alphabet);
-    wheel2.alphabet = permute(wheel2.alphabet);
+    wheel1.alphabet = permuteLeft(wheel1.alphabet);
+    wheel2.alphabet = permuteRight(wheel2.alphabet);
   }
 }
