@@ -5,6 +5,7 @@ color GREEN = #1DD306;
 color LIGHT_GREEN = color(0, 255, 0);
 String encrypted;
 String decrypted;
+String a1, a2;
 
 void setup() {
   size(1200, 800);
@@ -12,8 +13,10 @@ void setup() {
   noStroke();
 
   fill(WHEEL_COLOR);
-  wheel1 = new Wheel(345, 300, "QWERTYUIOPASDFGHJKLZXCVBNM");
-  wheel2 = new Wheel(855, 300, "abcdefghijklmnopqrstuvwxyz".toUpperCase());
+  a1 = "QWERTYUIOPASDFGHJKLZXCVBNM".toUpperCase();
+  a2 = "abcdefghijklmnopqrstuvwxyz".toUpperCase();
+  wheel1 = new Wheel(345, 300, a1);
+  wheel2 = new Wheel(855, 300, a2);
 
   encrypted = "";
   decrypted = "";
@@ -71,6 +74,7 @@ String reverse_word(String word) {
 }
 
 void draw() {
+  background(BG_COLOR);
   wheel1.displayCW();
   wheel2.displayCCW();
 
@@ -81,8 +85,13 @@ void draw() {
   fill(255, 0, 0);
   text("plaintext", 855, 300);
   fill(WHEEL_COLOR);
+  
+  // words
+  fill(0);
+  text("encrypted: "+encrypted, width/2, height-50);
+  text("decrypted: "+decrypted, width/2, height-150);
+  fill(WHEEL_COLOR);
 
-  //println(reverse_word("penis"));
 }
 
 void mousePressed() {
@@ -101,5 +110,12 @@ void keyPressed() {
     println(decrypted);
     wheel1.alphabet = permuteLeft(wheel1.alphabet);
     wheel2.alphabet = permuteRight(wheel2.alphabet);
+  }
+  else if (key == 'r') {
+    wheel1.alphabet = a1;
+    wheel2.alphabet = a2;
+    
+    encrypted = "";
+    decrypted = "";
   }
 }
