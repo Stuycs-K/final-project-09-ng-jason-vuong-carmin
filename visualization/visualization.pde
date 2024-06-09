@@ -14,7 +14,7 @@ void setup() {
 
   fill(WHEEL_COLOR);
   a1 = "QWERTYUIOPASDFGHJKLZXCVBNM".toUpperCase();
-  a2 = "abcdefghijklmnopqrstuvwxyz".toUpperCase();
+  a2 = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".toUpperCase();
   wheel1 = new Wheel(345, 300, a1);
   wheel2 = new Wheel(855, 300, a2);
 
@@ -32,6 +32,11 @@ String rotate(String string) { // ABCDE --> BCDEA
   return string;
 }
 
+String rot(String string) {
+  string = string.substring(0, 1)+string.substring(2, 14)+string.substring(1, 2)+string.substring(15,string.length());
+  return "";
+}
+
 String unrotate(String string) { // ABCDE --> EABCD
   //while (string.charAt(0) != first) {
   string = string.substring(string.length()-1, string.length()) + string.substring(0, string.length()-1);
@@ -40,18 +45,16 @@ String unrotate(String string) { // ABCDE --> EABCD
 }
 
 String permuteLeft(String string) {
-  String newString = string.substring(0, 13)+string.charAt(25)+string.substring(13, 25);
-  //println(string);
-  //println(newString);
-  return newString;
+  string = string.substring(0, 1)+string.substring(2, 14)+string.substring(1, 2)+string.substring(14,string.length());
+  return string;
 }
 
 String permuteRight(String string) {
   string = rotate(string);
-  String newString = string.substring(0, 13)+string.charAt(24)+string.substring(13, 24)+string.charAt(25);
+  string = string.substring(0, 2)+string.substring(3, 14)+string.substring(2, 3)+string.substring(14,string.length());
   //println(string);
   //println(newString);
-  return newString;
+  return string;
 }
 
 
@@ -106,16 +109,19 @@ void keyPressed() {
   if (key == ' ') { // WHEN YOU FIND THE LETTER
     encrypted += wheel1.alphabet.charAt(0);
     decrypted += wheel2.alphabet.charAt(0);
-    println(encrypted);
-    println(decrypted);
+    //println(encrypted);
+    //println(decrypted);
+   
     wheel1.alphabet = permuteLeft(wheel1.alphabet);
     wheel2.alphabet = permuteRight(wheel2.alphabet);
+    //println(wheel1.alphabet);
+    //println(wheel2.alphabet);
   }
   else if (key == 'r') {
     wheel1.alphabet = a1;
     wheel2.alphabet = a2;
-    
+
     encrypted = "";
-    decrypted = "";
+    decrypted = "";  
   }
 }
