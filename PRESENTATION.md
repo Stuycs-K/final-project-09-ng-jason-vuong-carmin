@@ -36,4 +36,5 @@ After we finished the terminal-based encoder/decoder, we decided to work on an e
 
 This was mainly a fun exercise. Also, it allowed us to create more creative questions for the tryhackme you have for homework! Hooray!
 
+[TryHackMe Practice Room](https://tryhackme.com/jr/chaocipher) 
 
