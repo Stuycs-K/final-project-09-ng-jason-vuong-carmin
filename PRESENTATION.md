@@ -23,6 +23,9 @@ When adding the alphabet keys to each wheel, the first letter always starts at t
 
 This process will be repeated until the desired plain text is fully encoded.
 
+### Decryption Process
+The decryption process is actually the identical to the encryption process, except for one thing. This time, the person wanting to decode it will be turning the ciphertext wheel and will be reading off the plaintext wheel.
+
 
 
 
