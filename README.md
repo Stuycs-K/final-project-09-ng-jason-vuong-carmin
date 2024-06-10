@@ -58,3 +58,5 @@ As the plaintext / ciphertext is being exhausted, the encrypted and decrypted le
 # [Presentation Link](https://drive.google.com/drive/folders/11QtJvnoM9cA_z2xoLuF2V6FjH790Enbj?usp=sharing)
 
 # [PRESENTATION.MD](PRESENTATION.md)
+
+# [THM Practice Room](https://tryhackme.com/jr/chaocipher) 
