@@ -10,7 +10,7 @@ Group Name: <br>
 <b>The Moggers</b>
 
 ## Overview
-We implemented a cipher called the <b>chaocipher</b>. This is a cipher that doesn't need computers, however it is helpful to use a computer to perform the cipher quickly and do the visualizations. 
+We implemented a cipher called the <b>chaocipher</b> (a further explanation of the chaocipher will be provided in ```PRESENTATION.md```). This is a cipher that doesn't need computers, however it is helpful to use a computer to perform the cipher quickly and do the visualizations. 
 
 We decided to split the project up into three main parts: the cipher, the visualization, and the TryHackMe. After we finished the cipher part, we decided to create a program that takes in bytes for the key inputs. We decided to extrapolate the chaocipher to an arbitrary keylength, and that has become the basis for Task 2 of our THM. 
 
