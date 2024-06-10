@@ -66,3 +66,7 @@ add nadir and fix coloring
 
 test out encoding and decoding but it doesn't work
 - need to confirm with dcode.fr if my implementation is correct
+
+### 6/9/2024
+- added reset button + displays on screen
+- fix permuting using dcode.fr
