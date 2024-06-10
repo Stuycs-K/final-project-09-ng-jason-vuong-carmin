@@ -52,6 +52,12 @@ Started work on the TryHackMe. Looked at a video about VMs and quickly realized 
 - Tested some more code to see if something breaks
 - used a base58 calculator for the code 
 
+## 6/09/2024
+Finished the Tryhackme 
+- tested all the cases 
+- made the folder for each task
+
+
 ## Carmin Vuong
 
 ### 5/23/2024
