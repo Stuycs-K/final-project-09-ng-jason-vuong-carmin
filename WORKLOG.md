@@ -72,3 +72,37 @@ work on rotation of the cipher wheel
 - allowed CCW rotation of left wheel + CW rotation of the right wheel
 
 
+### 5/29/2024
+make other rotation possible + control using mouse buttons
+- make zenith position RED and BIG and on the top
+- tell Jason chaocipher's alphabet is generated reversed
+
+### 5/30/2024
+attempt to implement the reversed order of the wheels
+- doesn't work
+- better implementation could be make 2 separate methods todisplay the letters
+- one is CW and one is CCW (starts at zenith)
+
+### 5/31/2024
+make code cleaner with more methods
+- added displayCW and displayCCW methods inside Wheel class
+- need to add permutatation
+
+### 6/3/2024
+start permute function
+- use substrings
+
+### 6/5/2024
+finish permute function
+- for left and right wheel
+- manual control using space bar agfter choosing a letter
+
+add nadir and fix coloring
+- added labels for both wheels
+
+test out encoding and decoding but it doesn't work
+- need to confirm with dcode.fr if my implementation is correct
+
+### 6/9/2024
+- added reset button + displays on screen
+- fix permuting using dcode.fr
