@@ -38,4 +38,20 @@ The last file in the directory, ```generator.py```, serves as a generate key fun
 
 The folders ```task1``` and ```task2``` contain all the material for the tasks in the THM. You can access those tasks by going to the [TryHackMe Room](https://tryhackme.com/jr/chaocipher) itself.
 
-The folder ```visualization``` is a visualization of the traditional chaocipher built on processing. 
+### Visualization
+
+The folder ```visualization``` is a visualization of the traditional chaocipher built on processing.
+
+To run the program, open the processing file ```visualization.pde``` and click the run button in the top left. This program offers a <b>manual</b> experience of encoding / decoding text, allowing the user to see how inner workings of how the Chaocipher works.
+
+#### Controls:
+```LEFT-CLICK``` - rotates the disks OUTWARDS (left disk CCW right disk CW)
+
+```RIGHT-CLICK``` - rotates the disks INWARDS (left disk CW right disk CCW)
+
+```SPACE``` - choose the desired letter at the zenith + permutes both disks
+
+```R``` - reset everything
+
+As the plaintext / ciphertext is being exhausted, the encrypted and decrypted letters will be recorded at the bottom of the screen as the user manually chooses letters.
+
