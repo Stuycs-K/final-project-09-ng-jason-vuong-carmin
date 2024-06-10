@@ -105,6 +105,10 @@ test out encoding and decoding but it doesn't work
 ### 6/9/2024
 - added reset button + displays on screen
 - fix permuting using dcode.fr
+- add to PRESENTATION.md
+
+### 6/10/2024
+- add to PRESENTATION.md
 
 # References/Resources Used
 - [Wikipedia article for Chaocipher](https://en.wikipedia.org/wiki/Chaocipher)
