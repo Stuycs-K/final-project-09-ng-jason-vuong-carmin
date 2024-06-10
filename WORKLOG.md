@@ -112,6 +112,7 @@ test out encoding and decoding but it doesn't work
 
 ### 6/10/2024
 - add to PRESENTATION.md
+- finished video with Jason Ng
 
 # References/Resources Used
 - [Wikipedia article for Chaocipher](https://en.wikipedia.org/wiki/Chaocipher)
