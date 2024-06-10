@@ -56,6 +56,9 @@ Finished the Tryhackme
 - made the folders for each task
 Updated Readme
 
+### 6/10/2024 
+- Finished the video 
+- Finished Presentation 
 
 ## Carmin Vuong
 
