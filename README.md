@@ -10,7 +10,12 @@ Group Name: <br>
 <b>The Moggers</b>
 
 ## Overview
-We implemented a cipher called the <b>chaocipher</b>. In the ```ciphercode``` directory, you can find python code to use the chaocipher. It includes ```chaocipher.py```, which is used for the more traditional chaocipher (that only uses text encoding). To run, you should use this command: 
+We implemented a cipher called the <b>chaocipher</b>. 
+
+Note: 
+
+## Instructions
+In the ```ciphercode``` directory, you can find python code to use the chaocipher. It includes ```chaocipher.py```, which is used for the more traditional chaocipher (that only uses text encoding). To run, you should use this command: 
 
 ```
 python3 chaocipher.py
@@ -24,6 +29,8 @@ python3 cipher2.py [CIPHER FILE] [KEY FILE] [INPUT FILE] [OUTPUT FILE] [encrypt/
 
 There is an included makefile, however that makefile uses ```cipher.dat``` as the ```[CIPHER FILE]``` , ```plain.dat``` as the ```[KEY FILE]``` and ```output.dat``` as the ```[OUTPUT FILE]```. You can run ```make encrypt``` or ```make decrypt``` and set ```ARGS="[INPUT FILE]"```. 
 
-Note: 
+The last file in the directory, ```generator.py```, serves as a generate key function for the bit operations.
 
-## Instructions
+The folders ```task1``` and ```task2``` contain all the material for the tasks in the THM. You can access those tasks by going to the [TryHackMe Room](https://tryhackme.com/jr/chaocipher) itself.
+
+The folder ```visualization``` is a visualization of the traditional chaocipher built on processing. 
