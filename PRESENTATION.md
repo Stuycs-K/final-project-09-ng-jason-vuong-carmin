@@ -12,6 +12,8 @@ The Chaocipher makes use of 2 disks (left and right), each one having 26 removab
 
 When adding the alphabet keys to each wheel, the first letter always starts at the zenith and they go in opposite directions for each wheel. The left wheel will be ciphertext wheel and the right one will be the plaintext wheel.
 
+![title](images/1.JPG)
+
 ### Encryption Process
 1. Rotate the plaintext wheel (right) until the desired letter to encode is at the zenith position. In turn, the ciphertext wheel will turn accordingly as well.
 
