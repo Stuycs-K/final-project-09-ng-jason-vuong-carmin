@@ -35,3 +35,5 @@ Aside from the visualization, we worked on a terminal-based encoder/decoder.
 After we finished the terminal-based encoder/decoder, we decided to work on an encoder/decoder that works for inputs of various lengths (or, at least 3 bytes in length) and for byte data. We could do this as the nadir would always be at least half the key length. We made sure that this could work using the traditional alphabetical chaociphers as the test cases. If it passed the case for an alphabetical cipher (checked by dcode), then that means the cipher works. Of course, this is not like the original chaocipher, so there wasn't a reference to go off of.
 
 This was mainly a fun exercise. Also, it allowed us to create more creative questions for the tryhackme you have for homework! Hooray!
+
+# [Presentation Link](https://drive.google.com/drive/folders/11QtJvnoM9cA_z2xoLuF2V6FjH790Enbj?usp=sharing)
